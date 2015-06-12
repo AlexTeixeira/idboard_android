@@ -1,0 +1,45 @@
+/***************************************************************/
+/***************************************************************/
+/************************IDBOARD V1*****************************/
+/***********************Dévelopé par****************************/
+/***************************************************************/
+/***********************John Escales****************************/
+/****************************et*********************************/
+/*********************Alexandre Teixeira************************/
+/***************************************************************/
+
+
+Sommaire 
+
+1 Utilité de l'application
+2 Répartition du code source
+3 Disponibilité
+
+
+1 Utilité de l'application
+
+L'application permet aux élèves de l'école CampusID de pouvoir visualisés
+le planning hebdomadaire, les messages de l'administration et les
+offres de stage ou d'alternance disponible et diffusé par CampusID.
+
+L'application perlet également de prévenir d'une absence ou d'un retard en 
+envoyant un mail à l'administration.
+
+2 Répartition du code
+
+Le code est répartie en 3 package Java.
+
+	a - com.idboard.campusid
+
+Ce package contient toutes les classes qui ont une intéraction direct avec un
+élément graphique de l'application
+
+
+	b - json
+
+Ce sont les classes qui permettent de récupérer les informations du web service,
+en fonction de l'api appelé ( le planning, les offres, etc... )
+L'adresse du WB : http://idboard.net/idws/
+
+
+	

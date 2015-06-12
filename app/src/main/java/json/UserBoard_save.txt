@@ -1,0 +1,299 @@
+
+public class UserBoard{
+	/*
+	 * Json envoyé par le WB pour les User
+	 * 
+	 *  Sample:
+		{
+		  "Result": {
+		    "ExitCode": 1,
+		    "ExitMessage": "sample string 2"
+		  },
+		  "User": {
+		    "FirstName": "sample string 1",
+		    "LastName": "sample string 2",
+		    "DateOfBirth": "2014-07-05T10:48:05.5107421+02:00",
+		    "CityOfBirth": "sample string 3",
+		    "CountryOfBirth": "sample string 4",
+		    "Nationality": "sample string 5",
+		    "ContactDetails": {
+		      "Address1": "sample string 1",
+		      "Address2": "sample string 2",
+		      "ZIPCode": "sample string 3",
+		      "City": "sample string 4",
+		      "Country": "sample string 5"
+		    },
+		    "Informations": {
+		      "Phone": "sample string 1",
+		      "Cellular": "sample string 2",
+		      "Mail": "sample string 3"
+		    },
+		    "Sites": [
+		      {
+		        "Name": "sample string 1",
+		        "Roles": [
+		          {
+		            "Name": "sample string 1"
+		          },
+		          {
+		            "Name": "sample string 1"
+		          },
+		          {
+		            "Name": "sample string 1"
+		          }
+		        ]
+		      },
+		      {
+		        "Name": "sample string 1",
+		        "Roles": [
+		          {
+		            "Name": "sample string 1"
+		          },
+		          {
+		            "Name": "sample string 1"
+		          },
+		          {
+		            "Name": "sample string 1"
+		          }
+		        ]
+		      },
+		      {
+		        "Name": "sample string 1",
+		        "Roles": [
+		          {
+		            "Name": "sample string 1"
+		          },
+		          {
+		            "Name": "sample string 1"
+		          },
+		          {
+		            "Name": "sample string 1"
+		          }
+		        ]
+		      }
+		    ]
+		  }
+		}
+	 * 
+	 * 
+	 * 
+	 */
+	
+
+    
+	/**************Tags name pour chaque noeud du json*************/
+	private static final String TAG_USER = "contacts";
+		private static final String TAG_FNAME = "name";
+		private static final String TAG_LNAME = "LastName";
+		private static final String TAG_BIRTHDAY = "DateOfBirth";
+		private static final String TAG_CITYBIRTH = "CityOfBirth";
+		private static final String TAG_COUNTRYBIRTH = "CountryOfBirth";
+		private static final String TAG_NATIONALITY = "Nationality";
+		private static final String TAG_DETAILS = "ContactDetails";
+			private static final String TAG_ADDRESS1 = "Address1";
+			private static final String TAG_ADDRESS2 = "Address2";
+			private static final String TAG_ZIPCODE = "ZIPCode";
+			private static final String TAG_CITY = "City";
+			private static final String TAG_COUNTRY = "Country";
+	private static final String TAG_INFOS = "Informations";
+		private static final String TAG_PHONE = "Phone";
+		private static final String TAG_CELLULAR = "Cellular";
+		private static final String TAG_MAIL = "Mail";
+	private static final String TAG_SITES = "Sites";
+		private static final String TAG_NAME = "Name";
+		private static final String TAG_ROLES = "Roles";
+			private static final String TAG_NAMEROLES = "Name";
+
+	// contacts JSONArray
+	JSONArray users = null;
+	
+	/**********Variable**********/
+	private String FirstName;
+	private String LastName;
+	private Date DateOfBirth;
+	private String CityOfBirth;
+	private String CountryOfBirth;
+	private String Nationality;
+	private String Address1;
+	private String Address2;
+	private String ZipCode;
+	private String City;
+	private String Country;
+	private String Phone;
+	private String Cellular;
+	private String Mail;
+	private String Name;
+	private List<String> Roles;
+	
+
+	/*****************Setter & Getter**************/
+	public String getFirstName() {
+		return FirstName;
+	}
+	public void setFirstName(String _firstName) {
+		FirstName = _firstName;
+	}
+	public String getLastName() {
+		return LastName;
+	}
+	public void setLastName(String lastName) {
+		LastName = lastName;
+	}
+	public Date getDateOfBirth() {
+		return DateOfBirth;
+	}
+	public void setDateOfBirth(Date dateOfBirth) {
+		DateOfBirth = dateOfBirth;
+	}
+	public String getCityOfBirth() {
+		return CityOfBirth;
+	}
+	public void setCityOfBirth(String cityOfBirth) {
+		CityOfBirth = cityOfBirth;
+	}
+	public String getCountryOfBirth() {
+		return CountryOfBirth;
+	}
+	public void setCountryOfBirth(String countryOfBirth) {
+		CountryOfBirth = countryOfBirth;
+	}
+	public String getNationality() {
+		return Nationality;
+	}
+	public void setNationality(String nationality) {
+		Nationality = nationality;
+	}
+	public String getAddress1() {
+		return Address1;
+	}
+	public void setAddress1(String address1) {
+		Address1 = address1;
+	}
+	public String getAddress2() {
+		return Address2;
+	}
+	public void setAddress2(String address2) {
+		Address2 = address2;
+	}
+	public String getZipCode() {
+		return ZipCode;
+	}
+	public void setZipCode(String zipCode) {
+		ZipCode = zipCode;
+	}
+	public String getCity() {
+		return City;
+	}
+	public void setCity(String city) {
+		City = city;
+	}
+	public String getCountry() {
+		return Country;
+	}
+	public void setCountry(String country) {
+		Country = country;
+	}
+	public String getPhone() {
+		return Phone;
+	}
+	public void setPhone(String phone) {
+		Phone = phone;
+	}
+	public String getCellular() {
+		return Cellular;
+	}
+	public void setCellular(String cellular) {
+		Cellular = cellular;
+	}
+	public String getMail() {
+		return Mail;
+	}
+	public void setMail(String mail) {
+		Mail = mail;
+	}
+	public String getName() {
+		return Name;
+	}
+	public void setName(String name) {
+		Name = name;
+	}
+	public List<String> getRoles() {
+		return Roles;
+	}
+	public void setRoles(List<String> roles) {
+		Roles = roles;
+	}
+	
+	/********************AUTRES******************/
+	/**http://www.androidhive.info/2012/01/android-json-parsing-tutorial/ pour le tuto**/
+	private static String url = /*"http://192.168.0.11/www/idBoard/userJson.php";*/"http://api.androidhive.info/contacts/"; //changer l'url par la bonne
+    JSONObject userboard = null;
+    JSONArray infoboard = null;
+    JSONArray sitesboard = null;
+//AJOUT POUR TEST
+public static ArrayList<String> list = new ArrayList<String>();
+
+    //SimpleDateFormat dateFormate = new SimpleDateFormat("dd/MM/yy hh:mi:ss");
+   
+	/**************M�thode de r�cup�ration ****************/
+	public void getUser() {
+		// Creating service handler class instance
+        ServiceHandler sh = new ServiceHandler();
+
+        // Making a request to url and getting response
+        String jsonStr = sh.makeServiceCall(url, ServiceHandler.GET);
+
+        Log.d("Response: ", "> " + jsonStr);
+
+        if (jsonStr != null) {
+            try {
+                JSONObject jsonObj = new JSONObject(jsonStr);
+                 
+                // Getting JSON Array node
+                users = jsonObj.getJSONArray(TAG_USER);
+
+                // looping through All Contacts
+                for (int i = 0; i < users.length(); i++) {
+                    JSONObject c = users.getJSONObject(i);
+                    
+                    //String id = c.getString(TAG_ID);
+                    setFirstName(c.getString(TAG_FNAME));
+                    //LastName = c.getString(TAG_LNAME);
+//AJOUT POUR TEST                    
+list.add(c.getString(TAG_FNAME));
+                    
+                    /*String email = c.getString(TAG_EMAIL);
+                    String address = c.getString(TAG_ADDRESS);
+                    String gender = c.getString(TAG_GENDER);
+
+                     Phone node is JSON Object
+                    JSONObject phone = c.getJSONObject(TAG_PHONE);
+                    String mobile = phone.getString(TAG_PHONE_MOBILE);
+                    String home = phone.getString(TAG_PHONE_HOME);
+                    String office = phone.getString(TAG_PHONE_OFFICE);
+
+                    // tmp hashmap for single contact
+                    HashMap<String, String> contact = new HashMap<String, String>();
+
+                    // adding each child node to HashMap key => value
+                    contact.put(TAG_ID, id);
+                    contact.put(TAG_NAME, name);
+                    contact.put(TAG_EMAIL, email);
+                    contact.put(TAG_PHONE_MOBILE, mobile);
+
+                    // adding contact to contact list
+                    contactList.add(contact);*/
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        } else {
+            Log.e("ServiceHandler", "Couldn't get any data from the url");
+        }
+
+        
+        
+	
+	
+	}
+}

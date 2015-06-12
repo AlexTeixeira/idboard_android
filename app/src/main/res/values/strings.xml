@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">IDBoard</string>
+    <string name="action_settings">Settings</string>
+    <string name="identification">Identification :</string>
+    <string name="password">Mot de passe :</string>
+    <string name="connexion">Se connecter</string>
+    <string name="logo_campusid">Logo CampusID</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string-array name="tabs_array">
+        <item>Planning</item>
+        <item>Historique</item>
+        <item>Retard/Absence</item>
+    </string-array>
+    
+    <string name="pick_time">00:00</string>
+    <string name="late_time">Temps de retard</string>
+    <string name="late_reason">Motif du retard</string>
+    <string name="send">Envoyer</string>
+    <string name="absence_begin">Début de l\'absence</string>
+    <string name="absence_end">Fin de l\'absence</string>
+    <string name="absence_reason">Motif de l\'absence</string>
+    <string name="pick_date">01/01/2002</string>
+    <string name="splash_screen">CampusID Sophia Antipolis\nFondation de Sophia Antipolis\nPlace Sophie Laffitte\n06904 Sophia Antipolis\n\nPhone: +33 (0)483066660</string>
+    <string name="web_campusid"><a href="http://www.campus-id.com">http://www.campus-id.com</a></string>
+    <string name="authors">Application développée par  :  Alexandre TEIXEIRA  &amp;  John ESCALES</string>
+
+</resources>

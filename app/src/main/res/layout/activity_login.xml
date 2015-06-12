@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper"
+    tools:context=".LoginActivity" >
+
+    <LinearLayout
+        android:id="@+id/loginTopLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/top_banner_black"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:onClick="showSplashScreen">
+
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:contentDescription="@string/logo_campusid"
+            android:src="@drawable/campusid_logo_white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loginBottomLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bottom_banner_black"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loginMiddleLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textViewIdentification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="N°IDBoard" />
+
+        <EditText
+            android:id="@+id/editTextIdentification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:inputType="textPersonName" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/textViewPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:inputType="textPassword" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mémoriser"
+            android:layout_marginBottom="25dp"
+            android:id="@+id/registerCheckBox"
+            android:checked="false" />
+
+        <Button
+            android:id="@+id/buttonConnexion"
+            android:layout_width="wrap_content"
+            android:background="@drawable/button_custom"
+            android:layout_height="wrap_content"
+            android:onClick="connexionClick"
+            android:text="@string/connexion" />
+    </LinearLayout>
+
+</RelativeLayout>

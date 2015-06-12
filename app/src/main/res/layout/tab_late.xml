@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".DeviceFragment" >
+
+    <TextView
+        android:id="@+id/textViewLateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="@string/late_time" />
+
+    <Button
+        android:id="@+id/buttonTimePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/button_date_custom"
+        android:onClick="showTimePickerDialog"
+        android:text="@string/pick_time" />
+
+    <TextView
+        android:id="@+id/textViewTexteReason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/late_reason" />
+
+    <EditText
+        android:id="@+id/editTextLateReason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:inputType="text"
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/buttonLateSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_custom"
+        android:onClick="sendEmail"
+        android:text="@string/send" />
+
+</LinearLayout>
