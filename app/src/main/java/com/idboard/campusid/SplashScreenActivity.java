@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.view.Window;
 import android.view.WindowManager;
+import com.campusid.idboard.R;
 
 public class SplashScreenActivity extends Activity
 {

@@ -31,6 +31,8 @@ import lib.Entity1;
 import lib.Planning;
 import lib.TabsInterface;
 import lib.WeekSets;
+import com.campusid.idboard.R;
+
 
 public class PlanningFragment extends Fragment implements TabsInterface {
 

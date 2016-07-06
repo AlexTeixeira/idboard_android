@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import com.idboard.campusid.R;
+import com.campusid.idboard.R;
 import com.idboard.campusid.LoginActivity.userSingleton;
 
 public interface TabsInterface {

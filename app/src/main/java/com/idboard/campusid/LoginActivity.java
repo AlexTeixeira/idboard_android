@@ -33,6 +33,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import com.campusid.idboard.R;
 
 public class LoginActivity extends Activity
 {

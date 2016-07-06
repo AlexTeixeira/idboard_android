@@ -13,6 +13,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import com.campusid.idboard.R;
+
 
 public class HistoryTabHostFragment extends Fragment implements TabsInterface {
     private FragmentTabHost mTabHost;

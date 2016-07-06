@@ -21,6 +21,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import com.campusid.idboard.R;
+
 
 public class MainActivity extends FragmentActivity
 {	

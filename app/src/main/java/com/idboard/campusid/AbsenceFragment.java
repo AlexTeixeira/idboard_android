@@ -11,6 +11,8 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
+import com.campusid.idboard.R;
+
 
 public class AbsenceFragment extends Fragment  {
 
