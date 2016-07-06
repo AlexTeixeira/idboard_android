@@ -113,14 +113,21 @@ public class UserBoard {
                             } catch (Exception e) {
                                 Log.e("Error =>", e.toString());
                             }
+                            try {
+                                classSplit = classSplit.split("élèvede")[1];
+                            } catch (ArrayIndexOutOfBoundsException e) {
+                                Log.e("Error", e.toString());
+                            }
 
-
+                            if(classSplit == null && classSplit.isEmpty()){
+                                classSplit = json_obj.getString((TAG.NAME.getValue()));
+                            }
                             user = new User(
                                     users.getString(TAG.FIRSTNAME.getValue()),
                                     users.getString(TAG.LNAME.getValue()),
                                     LoginActivity.userSingleton.INSTANCE.getId(),
                                     LoginActivity.userSingleton.INSTANCE.getPassword(),
-                                    classSplit.split("élèvede")[1],
+                                    classSplit,
                                     exitcode
                             );
                         }
